@@ -1,178 +1,262 @@
+X_train shape: (20, 16) dtype: float32
+y_train shape: (20, 2) dtype: float32
+X_test shape: (20, 16) dtype: float32
+y_test shape: (20, 2) dtype: float32
+Training labels: [0 1 1 1 1 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1]
+Test labels: [1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 1 1]
 [DEBUG] Entered q_rfm function...
-[DEBUG] Initializing Aer backend...
-[DEBUG] Aer backend initialized successfully
-[DEBUG] Creating FidelityQuantumKernel...
-[DEBUG] FidelityQuantumKernel created successfully
-[DEBUG] Kernel Evaluation Success! Matrix shape: (10, 10)
-[DEBUG] Loaders provided
-[DEBUG] X_train shape: torch.Size([100, 16]), y_train shape: torch.Size([100, 3])
-[DEBUG] X_test shape: torch.Size([20, 16]), y_test shape: torch.Size([20, 3])
-[DEBUG] Iteration 1/2 started...
-[DEBUG] Computing K_train...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
 [DEBUG] Evaluating Quantum Kernel...
-[DEBUG] Kernel evaluated: shape (100, 100), time 10769.65 s
-[DEBUG] K_train computed, shape: (100, 100)
+[DEBUG] Kernel evaluated: shape (20, 20), time 234.00 s
 Round 0 Train Acc:  1.0
 [DEBUG] Evaluating Quantum Kernel...
-[DEBUG] Kernel evaluated: shape (100, 20), time 4276.37 s
-Round 0 MSE:  0.3189302907868041
-Round 0 Acc:  0.25
+[DEBUG] Kernel evaluated: shape (20, 20), time 439.02 s
+Round 0 MSE:  0.4955200298619281
+Round 0 Acc:  0.75
 [DEBUG] Entering get_grads...
 [DEBUG] Computing quantum kernel matrix for gradients...
 [DEBUG] Evaluating Quantum Kernel...
-[DEBUG] Kernel evaluated: shape (100, 100), time 21299.23 s
-[DEBUG] Quantum kernel matrix computed for gradient shape: (100, 100)
-[DEBUG] Updated M at iteration 1:
-[[ 1.46566154e-02  2.50987569e-03 -4.54356777e-04  8.25684692e-04
-  -4.79901209e-04  8.83071800e-04  2.27179029e-03  1.66942272e-03
-   3.15398909e-03  1.52352935e-04  1.33734837e-03  2.33529066e-03
-  -1.33717840e-03  1.62232702e-03  8.52973390e-05  2.09679618e-03]
- [ 2.50987569e-03  1.37564493e-02  6.31020463e-04  2.60197604e-03
-   4.87795682e-04  1.09490450e-03  1.99752580e-03 -4.49400424e-04
-   2.82193325e-03  1.98640907e-03  3.72233044e-04  6.48746267e-04
-  -7.50465319e-04  4.57028276e-04  1.28755940e-03 -8.03517934e-04]
- [-4.54356777e-04  6.31020463e-04  1.36763202e-02  1.41816121e-03
-   1.21538492e-03 -1.41160897e-04 -2.50971731e-04  1.87402801e-03
-  -1.49025558e-03  1.14626647e-03  9.48408677e-04  1.37685030e-03
-   2.72777630e-04  2.60408106e-03 -3.61621023e-05 -2.42045335e-03]
- [ 8.25684692e-04  2.60197604e-03  1.41816121e-03  1.63006559e-02
-   3.53501714e-03  3.56163806e-03  1.94853882e-03  4.08754032e-03
-  -1.95704924e-04 -1.51560438e-04 -2.16304348e-03  1.99325779e-03
-  -2.49044737e-04 -1.20953118e-04  2.14517859e-04 -3.13490396e-03]
- [-4.79901209e-04  4.87795682e-04  1.21538492e-03  3.53501714e-03
-   1.23154251e-02 -2.12231113e-04  8.55154125e-04  1.01944676e-03
-  -1.18406455e-03 -5.16912143e-04 -1.60879653e-03  5.68242802e-04
-  -5.79727988e-04  7.14184716e-04  4.56222187e-04 -1.12420694e-05]
- [ 8.83071800e-04  1.09490450e-03 -1.41160897e-04  3.56163806e-03
-  -2.12231113e-04  1.21367397e-02 -1.39050360e-04  1.77620491e-03
-   2.70143896e-03 -2.01144279e-03 -6.54841831e-04  9.92587884e-04
-  -3.41356732e-04 -2.93290301e-04  6.51704438e-04 -4.94462089e-04]
- [ 2.27179029e-03  1.99752580e-03 -2.50971731e-04  1.94853882e-03
-   8.55154125e-04 -1.39050360e-04  1.49516901e-02  2.47105504e-07
-   6.80245634e-04 -2.02318397e-03  4.90140403e-04  2.67017283e-04
-   2.69273034e-04 -1.06720756e-04  4.58364002e-03  5.16599626e-04]
- [ 1.66942272e-03 -4.49400424e-04  1.87402801e-03  4.08754032e-03
-   1.01944676e-03  1.77620491e-03  2.47105504e-07  1.57995522e-02
-   1.73923001e-03  2.29832507e-03 -7.76836881e-04  2.44157412e-03
-  -1.47674710e-03  5.82562861e-05  1.76606060e-03 -2.17930693e-03]
- [ 3.15398909e-03  2.82193325e-03 -1.49025558e-03 -1.95704924e-04
-  -1.18406455e-03  2.70143896e-03  6.80245634e-04  1.73923001e-03
-   1.63480025e-02  2.07651383e-03  2.32067611e-03  9.93642258e-04
-  -3.90121422e-04  6.08534785e-04  1.67916354e-03  6.49355818e-04]
- [ 1.52352935e-04  1.98640907e-03  1.14626647e-03 -1.51560438e-04
-  -5.16912143e-04 -2.01144279e-03 -2.02318397e-03  2.29832507e-03
-   2.07651383e-03  1.61446370e-02  9.31188697e-04  7.69649458e-04
-  -4.72865475e-04  9.65723069e-04 -1.68704812e-03 -2.72712030e-04]
- [ 1.33734837e-03  3.72233044e-04  9.48408677e-04 -2.16304348e-03
-  -1.60879653e-03 -6.54841831e-04  4.90140403e-04 -7.76836881e-04
-   2.32067611e-03  9.31188697e-04  1.75073110e-02  2.36761174e-03
-   2.33396911e-03  1.07392156e-03  1.01873316e-04  7.84863732e-06]
- [ 2.33529066e-03  6.48746267e-04  1.37685030e-03  1.99325779e-03
-   5.68242802e-04  9.92587884e-04  2.67017283e-04  2.44157412e-03
-   9.93642258e-04  7.69649458e-04  2.36761174e-03  1.10362461e-02
-   1.16820948e-03  1.14428881e-03 -9.91762150e-04 -1.83835451e-03]
- [-1.33717840e-03 -7.50465319e-04  2.72777630e-04 -2.49044737e-04
-  -5.79727988e-04 -3.41356732e-04  2.69273034e-04 -1.47674710e-03
-  -3.90121422e-04 -4.72865475e-04  2.33396911e-03  1.16820948e-03
-   1.37937255e-02  9.28364461e-04 -2.98106601e-03 -2.95416708e-03]
- [ 1.62232702e-03  4.57028276e-04  2.60408106e-03 -1.20953118e-04
-   7.14184716e-04 -2.93290301e-04 -1.06720756e-04  5.82562861e-05
-   6.08534785e-04  9.65723069e-04  1.07392156e-03  1.14428881e-03
-   9.28364461e-04  1.28957173e-02  8.06707176e-05  9.63465543e-04]
- [ 8.52973390e-05  1.28755940e-03 -3.61621023e-05  2.14517859e-04
-   4.56222187e-04  6.51704438e-04  4.58364002e-03  1.76606060e-03
-   1.67916354e-03 -1.68704812e-03  1.01873316e-04 -9.91762150e-04
-  -2.98106601e-03  8.06707176e-05  1.62794422e-02  5.76491409e-04]
- [ 2.09679618e-03 -8.03517934e-04 -2.42045335e-03 -3.13490396e-03
-  -1.12420694e-05 -4.94462089e-04  5.16599626e-04 -2.17930693e-03
-   6.49355818e-04 -2.72712030e-04  7.84863732e-06 -1.83835451e-03
-  -2.95416708e-03  9.63465543e-04  5.76491409e-04  1.47114024e-02]]
-[DEBUG] Iteration 2/2 started...
-[DEBUG] Computing K_train...
+[DEBUG] Kernel evaluated: shape (20, 20), time 460.05 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (20, 20)
+[DEBUG] Iteration 2/2...
 [DEBUG] Evaluating Quantum Kernel...
-[DEBUG] Kernel evaluated: shape (100, 100), time 10380.00 s
-[DEBUG] K_train computed, shape: (100, 100)
+[DEBUG] Kernel evaluated: shape (20, 20), time 271.23 s
 Round 1 Train Acc:  1.0
 [DEBUG] Evaluating Quantum Kernel...
-[DEBUG] Kernel evaluated: shape (100, 20), time 4231.79 s
-Round 1 MSE:  0.23203052611624236
-Round 1 Acc:  0.25
+[DEBUG] Kernel evaluated: shape (20, 20), time 519.59 s
+Round 1 MSE:  0.4955102968938584
+Round 1 Acc:  0.75
 [DEBUG] Entering get_grads...
 [DEBUG] Computing quantum kernel matrix for gradients...
 [DEBUG] Evaluating Quantum Kernel...
-[DEBUG] Kernel evaluated: shape (100, 100), time 20977.79 s
-[DEBUG] Quantum kernel matrix computed for gradient shape: (100, 100)
-[DEBUG] Updated M at iteration 2:
-[[ 7.21580465e-04  4.88841499e-04  6.52145827e-05  5.51683654e-04
-   1.19239892e-04  3.11481534e-04  4.33876558e-04  4.64081502e-04
-   5.80019841e-04  1.52808701e-04  1.03766120e-04  3.39796010e-04
-  -1.95941175e-04  1.00014033e-04  2.28181103e-04 -4.82691321e-05]
- [ 4.88841499e-04  6.46389148e-04  1.16779302e-04  6.38581987e-04
-   1.86071280e-04  3.18391656e-04  4.07963555e-04  4.02278092e-04
-   5.33844926e-04  2.11763472e-04  2.57519114e-05  2.84120819e-04
-  -1.53818721e-04  6.03412227e-05  2.54693499e-04 -1.86358287e-04]
- [ 6.52145827e-05  1.16779302e-04  4.48249571e-04  3.20173218e-04
-   1.22869445e-04  6.10707502e-05  1.27206134e-04  3.02484754e-04
-  -5.57522726e-05  1.00852660e-04  1.83943848e-04  2.31572834e-04
-   8.84951296e-05  1.58652794e-04  5.74148871e-05 -3.24175868e-04]
- [ 5.51683654e-04  6.38581987e-04  3.20173218e-04  1.34943950e-03
-   4.72465035e-04  5.68419928e-04  6.02934626e-04  8.99784034e-04
-   4.80072136e-04  1.38280579e-04 -9.39259771e-05  5.29400015e-04
-  -1.54774461e-04  4.02548067e-05  3.27780697e-04 -5.12644358e-04]
- [ 1.19239892e-04  1.86071280e-04  1.22869445e-04  4.72465035e-04
-   3.31634103e-04  1.42941033e-04  1.95245942e-04  2.77769665e-04
-   6.40851140e-05  8.63819696e-06 -1.35552313e-04  1.41213823e-04
-  -8.96123674e-05  2.06814893e-05  1.16906886e-04 -1.23839156e-04]
- [ 3.11481534e-04  3.18391656e-04  6.10707502e-05  5.68419928e-04
-   1.42941033e-04  4.25038685e-04  2.64395261e-04  3.90407193e-04
-   3.93945811e-04 -1.27283201e-05 -3.68278597e-05  2.25756725e-04
-  -1.09230677e-04 -1.05805393e-05  1.90409948e-04 -1.60196651e-04]
- [ 4.33876558e-04  4.07963555e-04  1.27206134e-04  6.02934626e-04
-   1.95245942e-04  2.64395261e-04  7.23082747e-04  3.90228903e-04
-   3.22882261e-04 -6.70484296e-05  8.33771264e-05  2.42352748e-04
-  -9.74175418e-05  4.29597603e-05  4.78006899e-04 -1.85151963e-04]
- [ 4.64081502e-04  4.02278092e-04  3.02484754e-04  8.99784034e-04
-   2.77769665e-04  3.90407193e-04  3.90228903e-04  9.53415059e-04
-   4.46884398e-04  2.61220644e-04  2.26745524e-05  4.50375257e-04
-  -1.75423775e-04  5.90324125e-05  3.23550077e-04 -3.95879440e-04]
- [ 5.80019841e-04  5.33844926e-04 -5.57522726e-05  4.80072136e-04
-   6.40851140e-05  3.93945811e-04  3.22882261e-04  4.46884398e-04
-   9.30565235e-04  2.70277786e-04  1.04151564e-04  2.76832347e-04
-  -1.98475900e-04  4.75910165e-05  2.66141811e-04 -1.83615266e-05]
- [ 1.52808701e-04  2.11763472e-04  1.00852660e-04  1.38280579e-04
-   8.63819696e-06 -1.27283201e-05 -6.70484296e-05  2.61220644e-04
-   2.70277786e-04  5.37373824e-04  9.21237734e-05  1.51163724e-04
-  -5.49629622e-05  8.85873378e-05 -6.58017234e-05 -5.89951378e-05]
- [ 1.03766120e-04  2.57519114e-05  1.83943848e-04 -9.39259771e-05
-  -1.35552313e-04 -3.68278597e-05  8.33771264e-05  2.26745524e-05
-   1.04151564e-04  9.21237734e-05  7.65858684e-04  2.07289064e-04
-   2.33083541e-04  1.28470885e-04  1.79877188e-05 -1.68117316e-04]
- [ 3.39796010e-04  2.84120819e-04  2.31572834e-04  5.29400015e-04
-   1.41213823e-04  2.25756725e-04  2.42352748e-04  4.50375257e-04
-   2.76832347e-04  1.51163724e-04  2.07289064e-04  4.19195887e-04
-   3.26450900e-05  9.14799311e-05  6.86664062e-05 -3.11493786e-04]
- [-1.95941175e-04 -1.53818721e-04  8.84951296e-05 -1.54774461e-04
-  -8.96123674e-05 -1.09230677e-04 -9.74175418e-05 -1.75423775e-04
-  -1.98475900e-04 -5.49629622e-05  2.33083541e-04  3.26450900e-05
-   4.19288437e-04  6.08436967e-05 -2.15645632e-04 -2.05610122e-04]
- [ 1.00014033e-04  6.03412227e-05  1.58652794e-04  4.02548067e-05
-   2.06814893e-05 -1.05805393e-05  4.29597603e-05  5.90324125e-05
-   4.75910165e-05  8.85873378e-05  1.28470885e-04  9.14799311e-05
-   6.08436967e-05  2.63642229e-04  1.97108584e-05 -2.26280099e-05]
- [ 2.28181103e-04  2.54693499e-04  5.74148871e-05  3.27780697e-04
-   1.16906886e-04  1.90409948e-04  4.78006899e-04  3.23550077e-04
-   2.66141811e-04 -6.58017234e-05  1.79877188e-05  6.86664062e-05
-  -2.15645632e-04  1.97108584e-05  6.31204632e-04 -5.60783556e-05]
- [-4.82691321e-05 -1.86358287e-04 -3.24175868e-04 -5.12644358e-04
-  -1.23839156e-04 -1.60196651e-04 -1.85151963e-04 -3.95879440e-04
-  -1.83615266e-05 -5.89951378e-05 -1.68117316e-04 -3.11493786e-04
-  -2.05610122e-04 -2.26280099e-05 -5.60783556e-05  6.12982723e-04]]
+[DEBUG] Kernel evaluated: shape (20, 20), time 547.08 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (20, 20)
 [DEBUG] Evaluating Quantum Kernel...
-[DEBUG] Kernel evaluated: shape (100, 100), time 10433.11 s
-[DEBUG] Solving system of equations...
-[DEBUG] System solved
+[DEBUG] Kernel evaluated: shape (20, 20), time 275.51 s
 [DEBUG] Evaluating Quantum Kernel...
-[DEBUG] Kernel evaluated: shape (100, 20), time 4128.29 s
-Final MSE:  0.33677829416392036
-Final Acc:  0.3
-Final MSE from q_rfm on dummy data: 0.33677829416392036
+[DEBUG] Kernel evaluated: shape (20, 20), time 526.50 s
+Final MSE:  0.4955005695181566
+Final predictions: [[2.89054387e-04 1.13388694e-02]
+ [6.46239210e-05 1.00640085e-04]
+ [1.53305120e-04 8.94891782e-03]
+ [2.22674265e-06 1.69820331e-05]
+ [2.22847535e-04 1.22827446e-04]
+ [2.12625706e-04 3.58861578e-03]
+ [5.09513111e-04 9.36413053e-05]
+ [2.89662830e-04 3.70458280e-05]
+ [8.90447827e-05 4.85888378e-03]
+ [1.21358299e-03 7.40538444e-03]
+ [5.54556898e-03 2.72638831e-03]
+ [5.88176633e-05 5.63218653e-03]
+ [3.54993626e-05 5.09091525e-03]
+ [7.70319346e-05 1.56209829e-03]
+ [3.30649143e-04 3.10395224e-03]
+ [5.43385742e-04 1.05613837e-02]
+ [8.85034497e-06 4.75440074e-06]
+ [1.85856897e-04 1.97205846e-04]
+ [1.94411528e-04 1.15214068e-02]
+ [2.39147951e-04 1.55882331e-02]]
+Final Acc:  0.75
+Final MSE from q_rfm on 4x4 MNIST data: 0.4955005695181566
+=============================sample 20 ===========================
+
+
+X_train shape: (30, 16) dtype: float32
+y_train shape: (30, 2) dtype: float32
+X_test shape: (20, 16) dtype: float32
+y_test shape: (20, 2) dtype: float32
+Training labels: [0 1 1 1 1 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1]
+Test labels: [1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 1 1]
+[DEBUG] Entered q_rfm function...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 30), time 468.87 s
+Round 0 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 20), time 628.44 s
+Round 0 MSE:  0.48953588247936375
+Round 0 Acc:  0.9
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 30), time 954.13 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (30, 30)
+[DEBUG] Iteration 2/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 30), time 583.76 s
+Round 1 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 20), time 745.93 s
+Round 1 MSE:  0.4895414490790181
+Round 1 Acc:  0.9
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 30), time 1174.60 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (30, 30)
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 30), time 583.79 s
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 20), time 766.22 s
+Final MSE:  0.4895471107514856
+Final predictions: [[2.21250095e-04 1.78091323e-02]
+ [2.31797430e-04 4.86583483e-05]
+ [1.47233076e-04 4.86490020e-02]
+ [6.11963390e-05 1.83466479e-05]
+ [4.50950758e-04 9.82092816e-05]
+ [4.41076921e-04 9.88854237e-03]
+ [4.54008160e-04 1.21649948e-04]
+ [9.82684123e-04 3.68596613e-04]
+ [4.29406288e-05 6.88620042e-03]
+ [1.25413379e-03 9.98825673e-03]
+ [3.49946271e-03 2.65934218e-02]
+ [6.00734258e-05 6.79663147e-03]
+ [4.23571741e-05 6.64119490e-03]
+ [1.85328391e-04 3.91666396e-03]
+ [2.86325709e-04 3.19152001e-03]
+ [2.61745813e-04 3.18785697e-02]
+ [1.21565527e-04 1.70285070e-05]
+ [3.75169232e-04 7.13121282e-04]
+ [2.87245765e-04 1.19358799e-02]
+ [1.92300731e-04 2.79652493e-02]]
+Final Acc:  0.9
+Final MSE from q_rfm on 4x4 MNIST data: 0.4895471107514856
+
+===============================================
+
+X_train shape: (50, 16) dtype: float32
+y_train shape: (50, 2) dtype: float32
+X_test shape: (20, 16) dtype: float32
+y_test shape: (20, 2) dtype: float32
+Training labels: [0 1 1 1 1 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1]
+Test labels: [1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 1 1]
+[DEBUG] Entered q_rfm function...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 50), time 1389.86 s
+Round 0 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 20), time 1060.50 s
+Round 0 MSE:  0.48135654497598973
+Round 0 Acc:  0.85
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 50), time 2737.63 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (50, 50)
+[DEBUG] Iteration 2/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 50), time 1673.13 s
+Round 1 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 20), time 1296.24 s
+Round 1 MSE:  0.48136535676451225
+Round 1 Acc:  0.85
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 50), time 3369.18 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (50, 50)
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 50), time 1689.04 s
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 20), time 1293.72 s
+Final MSE:  0.48137361867430695
+Final predictions: [[1.38089574e-04 6.54150287e-02]
+ [2.38427349e-04 8.83537573e-05]
+ [6.26517884e-05 2.76958236e-02]
+ [5.16349871e-05 1.14716938e-05]
+ [3.60575912e-04 2.91214362e-04]
+ [8.03132314e-04 3.18293862e-02]
+ [2.32091249e-03 4.88941251e-04]
+ [5.14303411e-04 1.12109643e-03]
+ [4.26028111e-05 4.67516575e-02]
+ [2.41234236e-04 2.35740523e-02]
+ [2.51796378e-04 3.50207134e-02]
+ [1.75113165e-04 9.81746990e-03]
+ [1.17559298e-03 6.87154198e-03]
+ [3.75138766e-04 3.29731535e-02]
+ [6.17515006e-04 3.28840484e-03]
+ [7.89707688e-04 5.62904390e-02]
+ [6.80125763e-05 2.19642676e-05]
+ [1.57915242e-03 1.69963791e-03]
+ [1.00118699e-03 2.07729991e-02]
+ [1.15456969e-04 1.73585646e-02]]
+Final Acc:  0.85
+Final MSE from q_rfm on 4x4 MNIST data: 0.48137361867430695
+
+
+
+
+
+
+
+=========sample 80===============
+X_train shape: (80, 16) dtype: float32
+y_train shape: (80, 2) dtype: float32
+X_test shape: (20, 16) dtype: float32
+y_test shape: (20, 2) dtype: float32
+Training labels: [0 1 1 1 1 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1]
+Test labels: [1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 1 1]
+[DEBUG] Entered q_rfm function...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 80), time 3634.01 s
+Round 0 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 20), time 1715.27 s
+Round 0 MSE:  0.47533610495190715
+Round 0 Acc:  0.85
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 80), time 7336.96 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (80, 80)
+[DEBUG] Iteration 2/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 80), time 4379.06 s
+Round 1 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 20), time 2083.86 s
+Round 1 MSE:  0.4755493966696947
+Round 1 Acc:  0.85
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 80), time 8883.83 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (80, 80)
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 80), time 4403.40 s
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 20), time 2098.68 s
+Final MSE:  0.47565462180659984
+Final predictions: [[5.37556976e-03 8.71058067e-02]
+ [5.66311919e-04 9.04703569e-05]
+ [3.25177233e-03 3.31525558e-02]
+ [1.72568256e-04 1.70310988e-05]
+ [4.48745557e-04 7.17858724e-04]
+ [7.19752563e-04 1.53483451e-02]
+ [2.77360196e-03 6.63755689e-04]
+ [6.55874062e-04 8.07298722e-04]
+ [6.17586997e-04 2.57477434e-02]
+ [1.55033294e-03 4.46952903e-02]
+ [2.06740321e-03 3.84212197e-02]
+ [7.53623950e-03 3.09110666e-02]
+ [1.67754544e-03 4.54320722e-03]
+ [9.30547027e-04 4.56816008e-02]
+ [8.53700569e-03 4.28978738e-03]
+ [3.72605401e-03 7.81686376e-02]
+ [1.61569333e-04 5.78704344e-05]
+ [4.90953265e-04 1.88403487e-03]
+ [4.20693914e-03 3.50166396e-02]
+ [4.13102083e-03 4.72867907e-02]]
+Final Acc:  0.85
+Final MSE from q_rfm on 4x4 MNIST data: 0.47565462180659984
