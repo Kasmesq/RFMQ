@@ -260,3 +260,97 @@ Final predictions: [[5.37556976e-03 8.71058067e-02]
  [4.13102083e-03 4.72867907e-02]]
 Final Acc:  0.85
 Final MSE from q_rfm on 4x4 MNIST data: 0.47565462180659984
+
+
+=========150/30==========crash
+
+
+Using downloaded and verified file: ../data/train_32x32.mat
+Using downloaded and verified file: ../data/test_32x32.mat
+(80, 16)
+(40, 16)
+X_train shape: (80, 16) dtype: float32
+y_train shape: (50, 10) dtype: float32
+X_test shape: (40, 16) dtype: float32
+y_test shape: (20, 10) dtype: float32
+---------------------------------------------------------------------------
+AssertionError                            Traceback (most recent call last)
+Cell In[22], line 207
+    205 # Create DataLoaders.
+    206 batch_size = 16
+--> 207 train_dataset = TensorDataset(X_train_tensor, y_train_tensor)
+    208 test_dataset = TensorDataset(X_test_tensor, y_test_tensor)
+    209 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+
+File ~/miniconda3/envs/rfm_env/lib/python3.8/site-packages/torch/utils/data/dataset.py:205, in TensorDataset.__init__(self, *tensors)
+    204 def __init__(self, *tensors: Tensor) -> None:
+--> 205     assert all(
+    206         tensors[0].size(0) == tensor.size(0) for tensor in tensors
+    207     ), "Size mismatch between tensors"
+    208     self.tensors = tensors
+
+AssertionError: Size mismatch between tensors
+
+
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[21], line 41
+     38             y_test.append(int(row[0]))
+     40 num_classes = 2
+---> 41 y_train = np.eye(num_classes)[y_train[:20]].astype(np.float32)
+     42 y_test = np.eye(num_classes)[y_test[:5]].astype(np.float32)
+     44 # Verify shapes
+
+IndexError: index 5 is out of bounds for axis 0 with size 2
+X_train shape: (20, 16) dtype: float32
+y_train shape: (20, 2) dtype: float32
+X_test shape: (5, 16) dtype: float32
+y_test shape: (5, 2) dtype: float32
+[DEBUG] Entered q_rfm function...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 20), time 234.51 s
+Round 0 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 5), time 125.31 s
+Round 0 MSE:  0.4952566875464469
+Round 0 Acc:  0.6
+[DEBUG] Skipping get_grads...
+[DEBUG] Iteration 2/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 20), time 231.72 s
+Round 1 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 5), time 126.31 s
+Round 1 MSE:  0.4952566875464469
+Round 1 Acc:  0.6
+[DEBUG] Skipping get_grads...
+...
+[DEBUG] Kernel evaluated: shape (20, 5), time 127.49 s
+Final MSE:  0.4952566875464469
+Final Acc:  0.6
+Final MSE from q_rfm on 4x4 MNIST data: 0.4952566875464469
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+
+X_train shape: (150, 16) dtype: float32
+y_train shape: (150, 2) dtype: float32
+X_test shape: (30, 16) dtype: float32
+y_test shape: (30, 2) dtype: float32
+Training labels: [0 1 1 1 1 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1]
+Test labels: [1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 1 1]
+[DEBUG] Entered q_rfm function...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (150, 150), time 12969.74 s
+Round 0 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (150, 30), time 4559.96 s
+Round 0 MSE:  0.44308473063325376
+Round 0 Acc:  0.8333333333333334
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
