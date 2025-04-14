@@ -1,0 +1,468 @@
+X_train shape: (20, 16) dtype: float32
+y_train shape: (20, 2) dtype: float32
+X_test shape: (20, 16) dtype: float32
+y_test shape: (20, 2) dtype: float32
+Training labels: [0 1 1 1 1 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1]
+Test labels: [1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 1 1]
+[DEBUG] Entered q_rfm function...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 20), time 234.00 s
+Round 0 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 20), time 439.02 s
+Round 0 MSE:  0.4955200298619281
+Round 0 Acc:  0.75
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 20), time 460.05 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (20, 20)
+[DEBUG] Iteration 2/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 20), time 271.23 s
+Round 1 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 20), time 519.59 s
+Round 1 MSE:  0.4955102968938584
+Round 1 Acc:  0.75
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 20), time 547.08 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (20, 20)
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 20), time 275.51 s
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 20), time 526.50 s
+Final MSE:  0.4955005695181566
+Final predictions: [[2.89054387e-04 1.13388694e-02]
+ [6.46239210e-05 1.00640085e-04]
+ [1.53305120e-04 8.94891782e-03]
+ [2.22674265e-06 1.69820331e-05]
+ [2.22847535e-04 1.22827446e-04]
+ [2.12625706e-04 3.58861578e-03]
+ [5.09513111e-04 9.36413053e-05]
+ [2.89662830e-04 3.70458280e-05]
+ [8.90447827e-05 4.85888378e-03]
+ [1.21358299e-03 7.40538444e-03]
+ [5.54556898e-03 2.72638831e-03]
+ [5.88176633e-05 5.63218653e-03]
+ [3.54993626e-05 5.09091525e-03]
+ [7.70319346e-05 1.56209829e-03]
+ [3.30649143e-04 3.10395224e-03]
+ [5.43385742e-04 1.05613837e-02]
+ [8.85034497e-06 4.75440074e-06]
+ [1.85856897e-04 1.97205846e-04]
+ [1.94411528e-04 1.15214068e-02]
+ [2.39147951e-04 1.55882331e-02]]
+Final Acc:  0.75
+Final MSE from q_rfm on 4x4 MNIST data: 0.4955005695181566
+=============================sample 20 ===========================
+
+
+X_train shape: (30, 16) dtype: float32
+y_train shape: (30, 2) dtype: float32
+X_test shape: (20, 16) dtype: float32
+y_test shape: (20, 2) dtype: float32
+Training labels: [0 1 1 1 1 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1]
+Test labels: [1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 1 1]
+[DEBUG] Entered q_rfm function...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 30), time 468.87 s
+Round 0 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 20), time 628.44 s
+Round 0 MSE:  0.48953588247936375
+Round 0 Acc:  0.9
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 30), time 954.13 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (30, 30)
+[DEBUG] Iteration 2/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 30), time 583.76 s
+Round 1 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 20), time 745.93 s
+Round 1 MSE:  0.4895414490790181
+Round 1 Acc:  0.9
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 30), time 1174.60 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (30, 30)
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 30), time 583.79 s
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (30, 20), time 766.22 s
+Final MSE:  0.4895471107514856
+Final predictions: [[2.21250095e-04 1.78091323e-02]
+ [2.31797430e-04 4.86583483e-05]
+ [1.47233076e-04 4.86490020e-02]
+ [6.11963390e-05 1.83466479e-05]
+ [4.50950758e-04 9.82092816e-05]
+ [4.41076921e-04 9.88854237e-03]
+ [4.54008160e-04 1.21649948e-04]
+ [9.82684123e-04 3.68596613e-04]
+ [4.29406288e-05 6.88620042e-03]
+ [1.25413379e-03 9.98825673e-03]
+ [3.49946271e-03 2.65934218e-02]
+ [6.00734258e-05 6.79663147e-03]
+ [4.23571741e-05 6.64119490e-03]
+ [1.85328391e-04 3.91666396e-03]
+ [2.86325709e-04 3.19152001e-03]
+ [2.61745813e-04 3.18785697e-02]
+ [1.21565527e-04 1.70285070e-05]
+ [3.75169232e-04 7.13121282e-04]
+ [2.87245765e-04 1.19358799e-02]
+ [1.92300731e-04 2.79652493e-02]]
+Final Acc:  0.9
+Final MSE from q_rfm on 4x4 MNIST data: 0.4895471107514856
+
+===============================================
+
+X_train shape: (50, 16) dtype: float32
+y_train shape: (50, 2) dtype: float32
+X_test shape: (20, 16) dtype: float32
+y_test shape: (20, 2) dtype: float32
+Training labels: [0 1 1 1 1 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1]
+Test labels: [1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 1 1]
+[DEBUG] Entered q_rfm function...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 50), time 1389.86 s
+Round 0 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 20), time 1060.50 s
+Round 0 MSE:  0.48135654497598973
+Round 0 Acc:  0.85
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 50), time 2737.63 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (50, 50)
+[DEBUG] Iteration 2/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 50), time 1673.13 s
+Round 1 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 20), time 1296.24 s
+Round 1 MSE:  0.48136535676451225
+Round 1 Acc:  0.85
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 50), time 3369.18 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (50, 50)
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 50), time 1689.04 s
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (50, 20), time 1293.72 s
+Final MSE:  0.48137361867430695
+Final predictions: [[1.38089574e-04 6.54150287e-02]
+ [2.38427349e-04 8.83537573e-05]
+ [6.26517884e-05 2.76958236e-02]
+ [5.16349871e-05 1.14716938e-05]
+ [3.60575912e-04 2.91214362e-04]
+ [8.03132314e-04 3.18293862e-02]
+ [2.32091249e-03 4.88941251e-04]
+ [5.14303411e-04 1.12109643e-03]
+ [4.26028111e-05 4.67516575e-02]
+ [2.41234236e-04 2.35740523e-02]
+ [2.51796378e-04 3.50207134e-02]
+ [1.75113165e-04 9.81746990e-03]
+ [1.17559298e-03 6.87154198e-03]
+ [3.75138766e-04 3.29731535e-02]
+ [6.17515006e-04 3.28840484e-03]
+ [7.89707688e-04 5.62904390e-02]
+ [6.80125763e-05 2.19642676e-05]
+ [1.57915242e-03 1.69963791e-03]
+ [1.00118699e-03 2.07729991e-02]
+ [1.15456969e-04 1.73585646e-02]]
+Final Acc:  0.85
+Final MSE from q_rfm on 4x4 MNIST data: 0.48137361867430695
+
+
+
+
+
+
+
+=========sample 80===============
+X_train shape: (80, 16) dtype: float32
+y_train shape: (80, 2) dtype: float32
+X_test shape: (20, 16) dtype: float32
+y_test shape: (20, 2) dtype: float32
+Training labels: [0 1 1 1 1 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1]
+Test labels: [1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 1 1]
+[DEBUG] Entered q_rfm function...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 80), time 3634.01 s
+Round 0 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 20), time 1715.27 s
+Round 0 MSE:  0.47533610495190715
+Round 0 Acc:  0.85
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 80), time 7336.96 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (80, 80)
+[DEBUG] Iteration 2/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 80), time 4379.06 s
+Round 1 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 20), time 2083.86 s
+Round 1 MSE:  0.4755493966696947
+Round 1 Acc:  0.85
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 80), time 8883.83 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (80, 80)
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 80), time 4403.40 s
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (80, 20), time 2098.68 s
+Final MSE:  0.47565462180659984
+Final predictions: [[5.37556976e-03 8.71058067e-02]
+ [5.66311919e-04 9.04703569e-05]
+ [3.25177233e-03 3.31525558e-02]
+ [1.72568256e-04 1.70310988e-05]
+ [4.48745557e-04 7.17858724e-04]
+ [7.19752563e-04 1.53483451e-02]
+ [2.77360196e-03 6.63755689e-04]
+ [6.55874062e-04 8.07298722e-04]
+ [6.17586997e-04 2.57477434e-02]
+ [1.55033294e-03 4.46952903e-02]
+ [2.06740321e-03 3.84212197e-02]
+ [7.53623950e-03 3.09110666e-02]
+ [1.67754544e-03 4.54320722e-03]
+ [9.30547027e-04 4.56816008e-02]
+ [8.53700569e-03 4.28978738e-03]
+ [3.72605401e-03 7.81686376e-02]
+ [1.61569333e-04 5.78704344e-05]
+ [4.90953265e-04 1.88403487e-03]
+ [4.20693914e-03 3.50166396e-02]
+ [4.13102083e-03 4.72867907e-02]]
+Final Acc:  0.85
+Final MSE from q_rfm on 4x4 MNIST data: 0.47565462180659984
+
+
+=========150/30==========crash
+
+
+Using downloaded and verified file: ../data/train_32x32.mat
+Using downloaded and verified file: ../data/test_32x32.mat
+(80, 16)
+(40, 16)
+X_train shape: (80, 16) dtype: float32
+y_train shape: (50, 10) dtype: float32
+X_test shape: (40, 16) dtype: float32
+y_test shape: (20, 10) dtype: float32
+---------------------------------------------------------------------------
+AssertionError                            Traceback (most recent call last)
+Cell In[22], line 207
+    205 # Create DataLoaders.
+    206 batch_size = 16
+--> 207 train_dataset = TensorDataset(X_train_tensor, y_train_tensor)
+    208 test_dataset = TensorDataset(X_test_tensor, y_test_tensor)
+    209 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+
+File ~/miniconda3/envs/rfm_env/lib/python3.8/site-packages/torch/utils/data/dataset.py:205, in TensorDataset.__init__(self, *tensors)
+    204 def __init__(self, *tensors: Tensor) -> None:
+--> 205     assert all(
+    206         tensors[0].size(0) == tensor.size(0) for tensor in tensors
+    207     ), "Size mismatch between tensors"
+    208     self.tensors = tensors
+
+AssertionError: Size mismatch between tensors
+
+
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[21], line 41
+     38             y_test.append(int(row[0]))
+     40 num_classes = 2
+---> 41 y_train = np.eye(num_classes)[y_train[:20]].astype(np.float32)
+     42 y_test = np.eye(num_classes)[y_test[:5]].astype(np.float32)
+     44 # Verify shapes
+
+IndexError: index 5 is out of bounds for axis 0 with size 2
+X_train shape: (20, 16) dtype: float32
+y_train shape: (20, 2) dtype: float32
+X_test shape: (5, 16) dtype: float32
+y_test shape: (5, 2) dtype: float32
+[DEBUG] Entered q_rfm function...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 20), time 234.51 s
+Round 0 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 5), time 125.31 s
+Round 0 MSE:  0.4952566875464469
+Round 0 Acc:  0.6
+[DEBUG] Skipping get_grads...
+[DEBUG] Iteration 2/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 20), time 231.72 s
+Round 1 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (20, 5), time 126.31 s
+Round 1 MSE:  0.4952566875464469
+Round 1 Acc:  0.6
+[DEBUG] Skipping get_grads...
+...
+[DEBUG] Kernel evaluated: shape (20, 5), time 127.49 s
+Final MSE:  0.4952566875464469
+Final Acc:  0.6
+Final MSE from q_rfm on 4x4 MNIST data: 0.4952566875464469
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+
+X_train shape: (150, 16) dtype: float32
+y_train shape: (150, 2) dtype: float32
+X_test shape: (30, 16) dtype: float32
+y_test shape: (30, 2) dtype: float32
+Training labels: [0 1 1 1 1 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1]
+Test labels: [1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 1 1]
+[DEBUG] Entered q_rfm function...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (150, 150), time 12969.74 s
+Round 0 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (150, 30), time 4559.96 s
+Round 0 MSE:  0.44308473063325376
+Round 0 Acc:  0.8333333333333334
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+
+
+
+============
+Training labels: [0 1 1 1 1 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1]
+Test labels: [1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 1 1]
+X_train shape: (120, 16) dtype: float32
+y_train shape: (120, 2) dtype: float32
+X_test shape: (50, 16) dtype: float32
+y_test shape: (50, 2) dtype: float32
+[DEBUG] Entered q_rfm function...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (120, 120), time 8299.42 s
+Round 0 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (120, 50), time 6048.47 s
+Round 0 MSE:  0.4444878050721709
+Round 0 Acc:  0.78
+[DEBUG] Skipping get_grads...
+[DEBUG] Iteration 2/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (120, 120), time 8285.47 s
+Round 1 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (120, 50), time 6029.36 s
+Round 1 MSE:  0.4444878050721709
+Round 1 Acc:  0.78
+[DEBUG] Skipping get_grads...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (120, 120), time 8338.20 s
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (120, 50), time 6035.39 s
+Final MSE:  0.4444878050721709
+Final Acc:  0.78
+Final MSE from q_rfm on 4x4 MNIST data: 0.4444878050721709
+==================================
+
+X_train shape: (100, 16) dtype: float32
+y_train shape: (100, 2) dtype: float32
+X_test shape: (30, 16) dtype: float32
+y_test shape: (30, 2) dtype: float32
+Training labels: [0 1 1 1 1 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1]
+Test labels: [1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 1 1]
+[DEBUG] Entered q_rfm function...
+[DEBUG] Kernel test...
+[DEBUG] Kernel test shape: (10, 10)
+[DEBUG] Iteration 1/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (100, 100), time 5663.40 s
+Round 0 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (100, 30), time 3145.83 s
+Round 0 MSE:  0.4670069747530347
+Round 0 Acc:  0.8666666666666667
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (100, 100), time 11449.06 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (100, 100)
+[DEBUG] Iteration 2/2...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (100, 100), time 6643.54 s
+Round 1 Train Acc:  1.0
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (100, 30), time 3801.73 s
+Round 1 MSE:  0.46674712267743107
+Round 1 Acc:  0.8666666666666667
+[DEBUG] Entering get_grads...
+[DEBUG] Computing quantum kernel matrix for gradients...
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (100, 100), time 13605.88 s
+[DEBUG] Quantum kernel matrix computed for gradient shape: (100, 100)
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (100, 100), time 6832.84 s
+[DEBUG] Evaluating Quantum Kernel...
+[DEBUG] Kernel evaluated: shape (100, 30), time 3848.91 s
+Final MSE:  0.4672098360401342
+Final predictions: [[1.54018825e-03 4.09673979e-02]
+ [1.28453710e-03 8.07122092e-05]
+ [2.14819448e-03 8.65075000e-02]
+ [3.33729496e-04 1.24427337e-04]
+ [3.40411000e-04 1.37572778e-03]
+ [5.79630128e-04 2.59503394e-02]
+ [7.26615145e-04 6.77593078e-05]
+ [8.71838631e-04 9.59507504e-04]
+ [6.04308936e-04 4.07003162e-02]
+ [2.04865185e-03 5.26224067e-02]
+ [1.55219112e-03 4.95221194e-02]
+ [7.74165628e-03 4.49937421e-02]
+ [8.09353023e-04 1.92657123e-02]
+ [5.29024672e-04 4.44319360e-02]
+ [8.79195987e-03 5.50478232e-03]
+ [4.46027232e-03 4.62149306e-02]
+ [9.86560923e-04 6.49913431e-05]
+ [4.43395916e-04 3.21233923e-05]
+ [3.91987469e-03 6.29291317e-02]
+ [1.33390586e-03 1.45601064e-01]
+ [1.68700781e-03 1.35085749e-02]
+ [4.65747956e-04 1.49162998e-02]
+ [7.50131620e-04 1.83202496e-03]
+ [1.45681534e-03 5.49593919e-02]
+ [6.82132366e-04 2.88901305e-03]
+ [9.19426845e-04 9.23443776e-02]
+ [5.46799621e-04 3.72078493e-03]
+ [7.12020220e-03 2.85005475e-02]
+ [1.29200714e-03 1.08470654e-01]
+ [7.39946440e-04 3.26858981e-02]]
+Final Acc:  0.8333333333333334
+Final MSE from q_rfm on 4x4 MNIST data: 0.4672098360401342
